@@ -13,8 +13,8 @@ Este é o repositório do nosso projeto no *Ideathon 2026.2* da Fatec de Araçat
 ## Documentação
 
  - [Documentação Estendida](https://docs.google.com/document/d/1AI1gTw0tbduEZQlvfL1OGX0-l26k6E2nWRDeNd40sHA/)
- - Prototipação
- - Wireframes
+ - Prototipação Navegável
+ - Protótipo Estático
  - Declaração de originalidade e de uso de IA
  - Apresentação
  - Vídeo de Backup
