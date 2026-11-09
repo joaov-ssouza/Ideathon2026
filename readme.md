@@ -1,7 +1,7 @@
 
-# Bem-vindo ao projeto!
+# Bem-vindo ao AtaBus!
 
-Este é o repositório do nosso projeto no *Ideathon 2026.2* da Fatec de Araçatuba. Dê uma olhada nos códigos, rascunhos, organização das pastas, arquitetura aplicada, fundamentações e demais itens importantes por aqui.
+Este é o repositório do nosso projeto AtaBus no *Ideathon 2026.2* da Fatec de Araçatuba. Dê uma olhada nos códigos, rascunhos, organização das pastas, arquitetura aplicada, fundamentações e demais itens importantes por aqui.
 
 ## Tecnologias
 
@@ -21,11 +21,11 @@ Este é o repositório do nosso projeto no *Ideathon 2026.2* da Fatec de Araçat
 
 ## Membros
 
- - João Vitor Santiago Souza, 2º Semestre
  - Eduardo Augusto Santos Rocha, 2º Semestre
  - Gabriel Carvalho dos Santos Camargo, 2º Semestre
- - Ruan Luiz Antunes Melo, 2º Semestre
+ - João Vitor Santiago Souza, 2º Semestre
  - João Pedro Silva Lima, 2º Semestre
+ - Ruan Luiz Antunes Melo, 2º Semestre
 
 ## Problema
 
