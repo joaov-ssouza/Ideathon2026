@@ -40,9 +40,9 @@ Ao invés de apenas mostrar rotas, o AtaBus permite que o passageiro defina seus
 - **Expansão de Escopo (Intermunicipal e Multimodal):** Levar a arquitetura do AtaBus para rodovias e viagens intermunicipais para criar jornadas completas.
 - **Dados em Tempo Real:** Integração contínua com APIs de GPS e telemetria da frota real da cidade.
 
-## Limitações Conhecidas (MVP)
+## Limitações Conhecidas
 
-Sendo este um Produto Mínimo Viável (MVP) desenvolvido durante o Ideathon:
+Sendo este um Protótipo desenvolvido durante o Ideathon:
 - **Dados Simulados:** O software atualmente roda simulações estáticas em ambiente controlado (mock de dados) para demonstrar a viabilidade da arquitetura, não consumindo posicionamento GPS real da frota neste estágio.
 - **Algoritmos Iniciais:** O motor de sugestão de rotas baseado nas preferências do usuário atua com lógica simulada; o treinamento real com Machine Learning faz parte da visão de futuro.
 - **Estética e UI:** O design atual atende a um protótipo de alta fidelidade funcional, com refinamentos estéticos e de usabilidade profunda mapeados para as próximas fases de evolução do produto.
