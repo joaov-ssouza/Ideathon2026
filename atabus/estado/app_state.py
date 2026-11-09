@@ -1,17 +1,12 @@
 import reflex as rx
-from sqlmodel import select
 from typing import List, Dict, Any
-
-from ..modelos.entidades import Ponto
 from ..dados.seed import PONTOS_INICIAIS
 from ..services.osm_service import buscar_pontos_reais_aracatuba
 
 class AppState(rx.State):
     view_atual: str = "home"
     erro_busca: str = ""
-    
     pontos_disponiveis: List[str] = []
-    
     todos_os_pontos_mapa: List[Dict[str, Any]] = []
     
     origem_selecionada: str = ""
@@ -41,23 +36,14 @@ class AppState(rx.State):
         if len(self.todos_os_pontos_mapa) > 0:
             return
 
-        with rx.session() as session:
-            pontos_bd = session.exec(select(Ponto)).all()
-            
-            if not pontos_bd:
-                for p in PONTOS_INICIAIS:
-                    session.add(Ponto(nome=p["nome"], lat=p["lat"], lon=p["lon"], tipo=p["tipo"]))
-                session.commit()
-                pontos_bd = session.exec(select(Ponto)).all()
-            
-            self.pontos_disponiveis = [p.nome for p in pontos_bd]
-            
-            lista_banco = [{"nome": p.nome, "lat": p.lat, "lon": p.lon, "tipo": p.tipo} for p in pontos_bd]
-            
-            pontos_osm_raw = buscar_pontos_reais_aracatuba()
-            lista_osm = [{"nome": p["nome"], "lat": p["lat"], "lon": p["lon"], "tipo": "Parada Comum"} for p in pontos_osm_raw]
-            
-            self.todos_os_pontos_mapa = lista_banco + lista_osm
+        self.pontos_disponiveis = [p["nome"] for p in PONTOS_INICIAIS]
+        
+        lista_banco = [{"nome": p["nome"], "lat": p["lat"], "lon": p["lon"], "tipo": p["tipo"]} for p in PONTOS_INICIAIS]
+        
+        pontos_osm_raw = buscar_pontos_reais_aracatuba()
+        lista_osm = [{"nome": p["nome"], "lat": p["lat"], "lon": p["lon"], "tipo": "Parada Comum"} for p in pontos_osm_raw]
+        
+        self.todos_os_pontos_mapa = lista_banco + lista_osm
 
     def set_origem(self, valor: str):
         self.origem_selecionada = valor
