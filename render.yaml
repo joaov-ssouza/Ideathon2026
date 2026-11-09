@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: atabus
+    runtime: docker
+    plan: free
+    region: ohio
+    healthCheckPath: /ping
+    envVars:
+      # Um worker reduz o consumo de memória no plano gratuito.
+      - key: GRANIAN_WORKERS
+        value: "1"

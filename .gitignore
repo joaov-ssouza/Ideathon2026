@@ -13,7 +13,6 @@ __pycache__/
 
 .web/
 .reflex/
-reflex.lock
 
 alembic
 alembic.ini

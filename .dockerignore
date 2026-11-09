@@ -1,0 +1,31 @@
+# Controle de versão e configurações locais
+.git
+.git/**
+.github
+.env
+.env.*
+!.env.example
+
+# Ambientes e caches Python
+.venv
+venv
+env
+__pycache__
+*.py[cod]
+.pytest_cache
+.mypy_cache
+.ruff_cache
+
+# Artefatos gerados localmente pelo Reflex (serão gerados dentro do build)
+.web
+.reflex
+.states
+
+# Dependências frontend locais
+node_modules
+
+# Bancos locais e arquivos temporários
+*.db
+*.sqlite
+*.sqlite3
+*.log

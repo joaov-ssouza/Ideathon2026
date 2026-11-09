@@ -1,0 +1,18 @@
+:{$PORT}
+
+encode gzip
+
+# Endpoints do backend Reflex. O endpoint de eventos utiliza WebSocket.
+@backend_routes path /_event /_event/* /ping /_health /_upload /_upload/*
+handle @backend_routes {
+    reverse_proxy 127.0.0.1:8000
+}
+
+# Frontend exportado durante o build da imagem.
+root * /srv
+route {
+    try_files {path} {path}/ /404.html
+    file_server {
+        precompressed br zstd gzip
+    }
+}
