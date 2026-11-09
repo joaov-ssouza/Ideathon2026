@@ -35,8 +35,8 @@ def render_rota(rota: dict) -> rx.Component:
             rx.heading(rota["linhas"], size="4", color="#0F172A", margin_top="2"),
             rx.divider(margin_y="2"),
             rx.grid(
-                rx.hstack(rx.icon(tag="footprints", size=16, color="#0F172A"), rx.text(f"Pé: {rota['caminhada']}", size="1", color="#0F172A")),
-                rx.hstack(rx.icon(tag="bus", size=16, color="#0F172A"), rx.text(f"Bus: {rota['onibus']}", size="1", color="#0F172A")),
+                rx.hstack(rx.icon(tag="footprints", size=16, color="#0F172A"), rx.text(f"A Pé: {rota['caminhada']}", size="1", color="#0F172A")),
+                rx.hstack(rx.icon(tag="bus", size=16, color="#0F172A"), rx.text(f"Ônibus: {rota['onibus']}", size="1", color="#0F172A")),
                 rx.hstack(rx.icon(tag="git-merge", size=16, color="#0F172A"), rx.text(rx.cond(rota["baldeacao"], "Com Baldeação", "Direto"), size="1", color="#0F172A")),
                 columns="2", spacing="2", width="100%"
             ),
